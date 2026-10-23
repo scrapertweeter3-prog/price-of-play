@@ -1,4 +1,4 @@
-/* Price of Play — draft board games, live out real usage cards, race cost per play. */
+/* Price of Play: draft board games, live out real usage cards, race cost per play. */
 "use strict";
 
 // Deck of buyable board games: price in dollars, shelf appeal blurb.
@@ -29,7 +29,7 @@ const LIVES = [
 const EVENTS = [
   { mult: 1.5, text: "An expansion drops and the table re-ups." },
   { mult: 1.0, text: "No drama. The schedule holds." },
-  { mult: 0.5, text: "Someone's kid swallows a token. Box gets pickyparents." },
+  { mult: 0.5, text: "Someone's kid swallows a token. Box gets benched." },
   { mult: 0.0, text: "Played once and shelved. The shrink wrap loses." },
   { mult: 1.25, text: "A friend group adopts it for their own nights." },
 ];
