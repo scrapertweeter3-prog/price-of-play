@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Price of Play</title>
+<meta name="description" content="A free browser card game about cost per play: draft the board game your table will actually play, and beat the ticket-line benchmark.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Price of Play</h1>
+  <p class="tagline">You bankroll the group's game shelf. Six rounds. Pick the box your table will actually play.</p>
+</header>
+
+<main>
+  <section id="setup">
+    <p>Every pick gets dealt a real life card: how often the group meets, how long the game stays in rotation, and the occasional event. Your score is <strong>cost per play</strong>, the price divided by the sessions you actually get. A game that never leaves the shrink wrap costs its full price.</p>
+    <p>Each round has a benchmark line, roughly what a movie ticket costs. Beat it more often than not and you backed the right boxes.</p>
+    <button id="start">Deal me in</button>
+  </section>
+
+  <section id="game" hidden>
+    <div class="bench-row">
+      <span id="round-label">Round 1 of 6</span>
+      <span id="bench-label">Ticket line: $4.00 per play</span>
+    </div>
+    <div id="shelf" class="shelf"></div>
+    <div id="outcome" hidden>
+      <div id="life-card" class="life"></div>
+      <div id="event-line" class="event"></div>
+      <div id="math-line" class="math"></div>
+      <div id="verdict" class="verdict"></div>
+      <button id="next">Next round</button>
+    </div>
+    <ol id="log"></ol>
+  </section>
+
+  <section id="end" hidden>
+    <h2>The shelf settles</h2>
+    <div id="end-summary"></div>
+    <button id="again">Run it back</button>
+  </section>
+
+  <section class="method">
+    <h2>The math</h2>
+    <p>cost per play = price &divide; (plays per year &times; years in rotation)</p>
+    <p>A $249 premium game played four times a year for five years lands near $12 per session. A $20 filler played once costs $20 flat. Price alone tells you almost nothing; frequency and longevity do the real work. It is the same division behind every budget estimate at <a href="https://poketdev.com">poketdev.com</a>.</p>
+  </section>
+</main>
+
+<footer>
+  <p>Price of Play is a free, open-source card game about spending on purpose. A side project of Poket Dev.</p>
+</footer>
+
+<script src="game.js"></script>
+</body>
+</html>
