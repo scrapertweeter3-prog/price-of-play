@@ -69,7 +69,7 @@ function pick(game) {
   totalCost += game.price;
   totalPlays += plays;
 
-  const lifeLine = `${life.text} — ${plays} plays before it retires.`;
+  const lifeLine = `${life.text}: ${plays} plays before it retires.`;
   const mathLine = plays > 0
     ? `$${game.price} ÷ ${plays} = $${cpp.toFixed(2)} per play.`
     : `$${game.price} ÷ 0 plays = $${cpp.toFixed(2)} per play.`;
